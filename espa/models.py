@@ -38,6 +38,12 @@ class Prefecture(models.Model):
     code = models.CharField(max_length=2, unique=True)  # looks like XX
     name = models.CharField(max_length=100, unique=True)
 
+    def __unicode__(self):
+        return "%s (%s)" % (self.name, self.code)
+
+    def __str__(self):
+        return self.__unicode__()
+
 
 class Municipality(models.Model):
     code = models.CharField(max_length=5)  # looks like XX_XX
