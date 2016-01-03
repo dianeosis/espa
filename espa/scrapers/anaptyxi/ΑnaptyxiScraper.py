@@ -25,12 +25,12 @@ import requests
 from espa.espa.models import Project, SubProject, Prefecture, Municipality
 
 
-PROJECT_DETAILS_URL = "http://www.anaptyxi.gov.gr/ergopopup.aspx?mis={0}&wnd=x&dnnprintmode=true"
+PROJECT_DETAILS_URL = "http://anaptyxi.gov.gr/ergopopup.aspx?mis={0}&wnd=x&dnnprintmode=true"
 
 # {0} is the area code
 # {1} is the number of results to fetch
 # {2} takes one of two values: 0 if you want to search based on prefecture, 1 if you want to search by state
-SINGLE_AREA_SEARCH_URL = "http://www.anaptyxi.gov.gr/DesktopModules/AVMap.ErgaReports_v2/SearchHandler.ashx?" \
+SINGLE_AREA_SEARCH_URL = "http://anaptyxi.gov.gr/DesktopModules/AVMap.ErgaReports_v2/SearchHandler.ashx?" \
                          "filterscount=0&groupscount=0&pagenum=0&pagesize={1}&recordstartindex=0&recordendindex=18&lang=el-GR&" \
                          "pageMode=1&searchValue=&searchField=&perioxesMode={2}&" \
                          "selectedPerioxes%5B%5D={0}&" \
